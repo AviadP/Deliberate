@@ -27,6 +27,7 @@ And look for these problems in the content:
 - **Contradictions** between sources, within one agent's claims, or between the evidence and a hypothesis.
 - **Weak support:** a single source, a stale or low-quality source, an anecdote treated as data, a claim stronger than its source.
 - **What's missing:** alternatives nobody considered, evidence nobody looked for, assumptions nobody stated.
+- **Slanted questions to the user:** a proposed question that describes one option only by its upside and another only by its downside, bundles several questions into one, or leaks the panel's preferred answer. An answer to a slanted question can't carry much weight.
 
 Lead with your top two issues. A few sharp objections beat a long list.
 

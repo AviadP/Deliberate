@@ -63,6 +63,21 @@ These rules are what make this a deliberation rather than four separate essays.
 
 Messages can be addressed to `researcher`, `theorist`, `critic`, `validator`, `all` or `user`. Outside the intake, a message to `user` is a proposed question: the validator decides which questions actually reach the user, and nobody else replies to them. The user's answers (`U` IDs) are facts about the user's situation; treat them as evidence with "user" as the source. They're authoritative on the user's goals and preferences, but like anyone's account they can be incomplete or uncertain on facts. Take "don't know" and hedged answers at face value rather than reading more into them.
 
+## Writing questions for the user
+
+A question to the user is the panel's cheapest source of information, and also its most fragile one. A slanted question costs a whole round to correct, and the unanswered part of a bundled question is usually lost for good. Every message to `user` follows these rules:
+
+1. **One question per message.** Ask exactly one thing. If two things matter, send two messages. People answer the first part of a bundled question and skip the rest.
+2. **Plain language.** Use no IDs and no jargon the user didn't use first. If the user needs context to answer, put it in the question, written for them. They should be able to answer in a line or two.
+3. **Balanced options.** When a question offers options, give each one both its cost and its benefit, with numbers on both sides where there are any. Never describe one option only by its upside and another only by its downside.
+4. **Keep your notes separate.** The message line holds only the question. Put what the answer would settle, and how each answer would shift the ranking, on a `Panel note:` line underneath. The moderator shows the user only the question, so your notes can't steer the answer.
+5. **Mark at most one question per batch as key**: the one whose answer would move the outcome most. If the user skips a key question, the moderator checks with them once.
+
+```markdown
+- **V2.3 → user (key):** <one question, in plain language>
+  - Panel note: <what it settles; how each answer would shift the ranking>
+```
+
 ## Message file format
 
 ```markdown

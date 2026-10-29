@@ -32,7 +32,7 @@ Put these between `## Replies` and `## Messages`:
 
 ```markdown
 ## Evidence
-- **E4**: <the claim, one or two sentences>. Source: <title, URL, date | "user">. Type: data | study | expert opinion | report | anecdote | inference. Strength: strong | moderate | weak.
+- **E4**: <the claim, one or two sentences>. Source: <title, URL, date | "user">. Read: full page | snippet only. Type: data | study | expert opinion | report | anecdote | inference. Strength: strong | moderate | weak.
 - **E2 (revised)**: <what changed and why, citing the message or evidence that prompted it>.
 - **E3 (retracted)**: <why>.
 
@@ -43,7 +43,9 @@ Put these between `## Replies` and `## Messages`:
 <What's still unknown, and whether more research could close it or only the user can.>
 ```
 
-List only new, revised and retracted evidence. Earlier entries stay on the board. Leave out "Against predictions" when no request this round carried a prediction.
+List only new, revised and retracted evidence. Earlier entries stay on the board.
+
+**Read** says whether you read the source itself (`full page`) or only saw its search-result snippet (`snippet only`), for example when a page can't be fetched. Snippet-only evidence can be at most `moderate`, because a snippet can drop the qualifier that changes its meaning. When a key claim is snippet-only, look for a second source you can read in full. Leave out "Against predictions" when no request this round carried a prediction.
 
 ## When you're done
 

@@ -41,6 +41,12 @@ No single agent talks to you; the moderator asks you the questions and writes do
 1. **Intake, before round 1.** The theorist reads your question, forms first hypotheses from it alone, and interviews you: your situation, goals, constraints, preferences, and what you've already tried. It asks up to five questions at a time, picking the ones that best separate its hypotheses, and follows up on your answers, for at most three batches. It stops as soon as more answers wouldn't change anything. If the answer doesn't depend on you (a purely factual question, say), it asks nothing.
 2. **Between rounds.** Any agent can propose a question for you. The validator picks at most three, and only ones whose answer could change the outcome, so you don't get a stream of questions from four agents.
 
+The questions follow fixed rules:
+- Each question asks one thing, in plain language.
+- When a question offers options, each comes with both its cost and its benefit.
+- You never see the panel's notes on how your answer would shift the ranking, so they can't steer you.
+- The panel can mark one question per batch as key. If you skip a key question, or an answer could be read two opposite ways, the moderator checks with you once and records the exchange.
+
 ## How the agents talk to each other
 
 - **A shared board.** Every turn is a file in `messages/`. Every agent reads the whole board before writing, so each sees what the others said directly, with no summarizing in between.

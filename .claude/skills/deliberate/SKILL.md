@@ -105,8 +105,13 @@ After each round, tell the user in one line: the round number, the leading hypot
 
 **Questions for the user.** Ask in two situations: during the intake, and after a round when the next round will start, the validator's `ask_user` is `yes`, and the mode is interactive.
 
-1. Ask the user every message addressed to `user` in the `## Messages` section of that file, word for word and numbered, with a note that they can skip any question or answer "don't know". Then wait for their reply.
-2. Write the answers file: `DIR/messages/<next rr>-0-user.md` after a round, or the intake path given in section 2:
+1. Ask the user every message addressed to `user` in the `## Messages` section of that file, numbered, with a note that they can skip any question or answer "don't know". Show only the question line, word for word. Leave out the `Panel note:` lines, because they're the panel's predictions and could steer the answer. Then wait for their reply.
+2. Check the reply before recording it. Ask at most once, with one short follow-up message covering both cases below:
+   - If the user left out a question marked key, ask whether they meant to skip it.
+   - If an answer could be read in two opposite ways (for example "30 70" when the question offered 70/30), ask which one they meant. Quote both readings, and don't suggest which is right.
+
+   Record the original answer, your follow-up and the clarified answer together, so the panel sees how the answer was reached.
+3. Write the answers file: `DIR/messages/<next rr>-0-user.md` after a round, or the intake path given in section 2:
 
    ```markdown
    ---
@@ -117,11 +122,12 @@ After each round, tell the user in one line: the round number, the leading hypot
    # Round <next round> · User answers
 
    - **U<next round>.1** (re <question ID, such as T0.1 or V2.3>): <their answer, verbatim | "skipped" | "don't know">
+   - **U<next round>.2** (re V2.4): "30 70". Moderator asked: "70% stocks / 30% T-bills, or 30% stocks / 70% T-bills?" Answer: "70 stocks"
    ```
 
    In the intake, use round 0, and keep numbering the U IDs across batches (`U0.1`, `U0.2`, …).
 
-3. Carry on with the intake or the next round. The answers file is the first item under "New since your last turn" for every agent.
+4. Carry on with the intake or the next round. The answers file is the first item under "New since your last turn" for every agent.
 
 ## 4. Verdict
 

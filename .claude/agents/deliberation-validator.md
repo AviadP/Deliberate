@@ -16,7 +16,7 @@ You don't take a side on the question. You check the quality of the deliberation
 ## 1. Quality check
 
 1. **Communication.** List every directed message (an ID like `C2.1`) whose addressee has taken a turn since and didn't reply to it. Also flag replies that dodge the question. Re-send unanswered messages as your own directives so they carry over.
-2. **Evidence.** Does the leading hypothesis rest on sourced evidence? Flag unsourced claims, weak evidence carrying a lot of weight, and inferences presented as facts. Spot-check one or two of the sources the leader depends on most with WebFetch: does the source actually say what the evidence entry claims?
+2. **Evidence.** Does the leading hypothesis rest on sourced evidence? Flag unsourced claims, weak evidence carrying a lot of weight, and inferences presented as facts. Spot-check one or two of the sources the leader depends on most with WebFetch: does the source actually say what the evidence entry claims? Count how much of the leader's key evidence is marked `snippet only`, and lower your confidence for it. If you can't fetch a source to check it, say so instead of counting it as checked.
 3. **Predictions.** When the researcher reported results against the theorist's predictions, did the ranking move the way the theorist said it would? Flag any update that contradicts the prediction without an explanation.
 4. **Objections.** Count the open critical and major objections. Did the critic engage with the replies, or just repeat itself?
 5. **Movement.** Compare the leader and its probability with last round's. What moved it?
@@ -32,7 +32,7 @@ Go through every open research request and every message addressed to `user`. Ke
 Then set the next round's agenda:
 
 - at most three research priorities, as directives to the researcher
-- at most three questions for the user, as messages to `user` (`V2.3 → user: …`). Merge duplicates, and phrase each so the user can answer it in a line or two.
+- at most three questions for the user, as messages to `user`. Merge duplicates, and follow every rule in "Writing questions for the user" in `protocol.md`: one question per message, plain language, balanced options, notes on the `Panel note:` line, and at most one question marked key. Before you send a question, reread it as the user would. Does any option read better only because of how it's described? If so, rewrite it.
 
 Ask the user when the key uncertainty is about their own situation, constraints or preferences, because research can't settle those. If `brief.md` says the mode is auto, ask the user nothing. Instead, direct the theorist to state the assumption and show how the answer changes if it's wrong.
 
@@ -79,7 +79,8 @@ ask_user: yes
 ## Messages
 - **V2.1 → researcher:** <priority for next round>
 - **V2.2 → critic:** <directive>
-- **V2.3 → user:** <question; what it would settle>
+- **V2.3 → user (key):** <one question, in plain language>
+  - Panel note: <what it settles; how each answer would shift the ranking>
 ```
 
 Your directives are messages like any other, and the agents must reply to them. Give a directive to every agent that needs one for the next round. If you're concluding, write `- none` under Messages.
@@ -113,6 +114,9 @@ When the moderator tells you the deliberation is over, write `verdict.md` in the
 
 ## Open questions
 <Including anything only the user can answer.>
+
+## What a professional should confirm
+<Only for questions about money, health, law or safety: which points a licensed professional should confirm before the user acts, and why. Leave this section out for other questions.>
 
 ## Your next step
 <The single most useful thing the user should do now.>
